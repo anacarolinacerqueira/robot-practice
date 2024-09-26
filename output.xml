@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.10.12 on linux)" generated="2024-09-26T15:31:41.551188" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="/home/anacarolina/Documentos/Projetos/robot-practice/login_tests.robot">
+<test id="s1-t1" name="CT01 - Login without type credentials" line="7">
+<kw name="Open the browser" owner="login_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-26T15:31:42.383809" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-26T15:31:42.382566" elapsed="17.013266"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-26T15:31:59.397948" elapsed="0.439976"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-09-26T15:31:59.846012" level="INFO">Opening url 'https://thinking-tester-contact-list.herokuapp.com/login'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-09-26T15:31:59.840296" elapsed="1.882608"/>
+</kw>
+<status status="PASS" start="2024-09-26T15:31:42.377106" elapsed="19.347465"/>
+</kw>
+<kw name="Click submit button" owner="login_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-26T15:32:01.732460" elapsed="0.488936"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-26T15:32:02.234415" level="INFO">Clicking element 'xpath: //*[@id="submit"]'.</msg>
+<arg>${SUBMIT_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-26T15:32:02.226234" elapsed="0.534775"/>
+</kw>
+<status status="PASS" start="2024-09-26T15:32:01.729377" elapsed="1.033119"/>
+</kw>
+<kw name="Check error message" owner="login_resources">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-09-26T15:32:02.783740" level="INFO">Verifying element 'xpath: //*[@id="error"]' contains exact text 'Incorrect username or password'.</msg>
+<arg>${ERROR_MESSAGE}</arg>
+<arg>Incorrect username or password</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-09-26T15:32:02.773740" elapsed="0.096227"/>
+</kw>
+<status status="PASS" start="2024-09-26T15:32:02.765523" elapsed="0.109032"/>
+</kw>
+<kw name="Close the browser" owner="login_resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-26T15:32:02.884327" elapsed="4.226893"/>
+</kw>
+<status status="PASS" start="2024-09-26T15:32:02.877589" elapsed="4.235071"/>
+</kw>
+<doc>This test case will try to login without type credentials</doc>
+<tag>login</tag>
+<status status="PASS" start="2024-09-26T15:31:42.372970" elapsed="24.740965"/>
+</test>
+<status status="PASS" start="2024-09-26T15:31:41.578603" elapsed="25.545128"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Tests">Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
