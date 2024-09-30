@@ -8,8 +8,6 @@ ${ERROR_MESSAGE}    xpath: //*[@id="error"]
 ${LOGIN_TITLE}    xpath: /html/body/h1
 ${VALID_USERNAME}    xpath: //*[@id="email"]    
 ${VALID_PASSWORD}    xpath: //*[@id="password"]
-${d_username}    ana@teste.com
-${d_password}    1234567
 ${logged_message}    xpath: /html/body/div/header/h1
 
 
@@ -29,17 +27,12 @@ Click submit button
 Check error message
     Element Text Should Be    ${ERROR_MESSAGE}    Incorrect username or password
 
-Type invalid email
-    Input Text    xpath: //*[@id="email"]    invalid
+Type email ${username}
+    Input Text    xpath: //*[@id="email"]    ${username}
     
-Type invalid password
-    Input Text    xpath: //*[@id="password"]    invalid
-
-Type valid email
-    Input Text    ${VALID_USERNAME}    ${d_username}
+Type password ${password}
+    Input Text    xpath: //*[@id="password"]    ${password}
     
-Type valid password
-    Input Text    ${VALID_PASSWORD}    ${d_password}
 Check success message
     Wait Until Element Is Visible    ${logged_message}
     Element Text Should Be    ${logged_message}    Contact List

@@ -1,214 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.10.12 on linux)" generated="2024-09-26T18:05:08.934600" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.10.12 on linux)" generated="2024-09-30T18:10:51.254691" rpa="false" schemaversion="5">
 <suite id="s1" name="Login Tests" source="/home/anacarolina/Documentos/Projetos/robot-practice/login_tests.robot">
 <test id="s1-t1" name="CT01 - Login without type credentials" line="7">
 <kw name="Open the browser" owner="login_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:05:10.031157" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg time="2024-09-30T18:10:51.706085" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-09-26T18:05:10.026087" elapsed="16.462874"/>
+<status status="PASS" start="2024-09-30T18:10:51.705314" elapsed="11.911899"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-09-26T18:05:26.490747" elapsed="0.374192"/>
+<status status="PASS" start="2024-09-30T18:11:03.618848" elapsed="0.380030"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:05:26.881106" level="INFO">Opening url 'https://thinking-tester-contact-list.herokuapp.com/login'</msg>
+<msg time="2024-09-30T18:11:04.001769" level="INFO">Opening url 'https://thinking-tester-contact-list.herokuapp.com/login'</msg>
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-09-26T18:05:26.869122" elapsed="1.650210"/>
+<status status="PASS" start="2024-09-30T18:11:04.000429" elapsed="1.160219"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:05:10.018284" elapsed="18.506539"/>
+<status status="PASS" start="2024-09-30T18:10:51.702094" elapsed="13.459373"/>
 </kw>
 <kw name="Click submit button" owner="login_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOGIN_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-26T18:05:28.554707" elapsed="0.867642"/>
+<status status="PASS" start="2024-09-30T18:11:05.167182" elapsed="0.247509"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:05:29.426397" level="INFO">Clicking element 'xpath: //*[@id="submit"]'.</msg>
+<msg time="2024-09-30T18:11:05.416675" level="INFO">Clicking element 'xpath: //*[@id="submit"]'.</msg>
 <arg>${SUBMIT_LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-26T18:05:29.424007" elapsed="0.546257"/>
+<status status="PASS" start="2024-09-30T18:11:05.415713" elapsed="0.407814"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:05:28.540002" elapsed="1.431518"/>
+<status status="PASS" start="2024-09-30T18:11:05.163329" elapsed="0.660895"/>
 </kw>
 <kw name="Check error message" owner="login_resources">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:05:29.979611" level="INFO">Verifying element 'xpath: //*[@id="error"]' contains exact text 'Incorrect username or password'.</msg>
+<msg time="2024-09-30T18:11:05.831286" level="INFO">Verifying element 'xpath: //*[@id="error"]' contains exact text 'Incorrect username or password'.</msg>
 <arg>${ERROR_MESSAGE}</arg>
 <arg>Incorrect username or password</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-09-26T18:05:29.977363" elapsed="0.090538"/>
+<status status="PASS" start="2024-09-30T18:11:05.829538" elapsed="0.057896"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:05:29.974573" elapsed="0.094791"/>
+<status status="PASS" start="2024-09-30T18:11:05.827075" elapsed="0.060914"/>
 </kw>
 <kw name="Close the browser" owner="login_resources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-09-26T18:05:30.075739" elapsed="4.480051"/>
+<status status="PASS" start="2024-09-30T18:11:05.891060" elapsed="3.248139"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:05:30.072901" elapsed="4.484701"/>
+<status status="PASS" start="2024-09-30T18:11:05.889720" elapsed="3.249839"/>
 </kw>
 <doc>This test case will try to login without type credentials</doc>
 <tag>login</tag>
-<status status="PASS" start="2024-09-26T18:05:10.011922" elapsed="24.547240"/>
+<status status="PASS" start="2024-09-30T18:10:51.699506" elapsed="17.440462"/>
 </test>
 <test id="s1-t2" name="CT02 - Login with invalid credentials" line="13">
 <kw name="Open the browser" owner="login_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:05:34.576808" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg time="2024-09-30T18:11:09.145107" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-09-26T18:05:34.574489" elapsed="17.359690"/>
+<status status="PASS" start="2024-09-30T18:11:09.144535" elapsed="11.242077"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-09-26T18:05:51.935653" elapsed="0.344677"/>
+<status status="PASS" start="2024-09-30T18:11:20.387487" elapsed="0.434069"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:05:52.285638" level="INFO">Opening url 'https://thinking-tester-contact-list.herokuapp.com/login'</msg>
+<msg time="2024-09-30T18:11:20.824915" level="INFO">Opening url 'https://thinking-tester-contact-list.herokuapp.com/login'</msg>
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-09-26T18:05:52.282255" elapsed="1.465148"/>
+<status status="PASS" start="2024-09-30T18:11:20.823197" elapsed="1.232342"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:05:34.569321" elapsed="19.183035"/>
+<status status="PASS" start="2024-09-30T18:11:09.143415" elapsed="12.913226"/>
 </kw>
-<kw name="Type invalid email" owner="login_resources">
+<kw name="Type email teste@teste.com" owner="login_resources" source_name="Type email ${username}">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:05:53.789750" level="INFO">Typing text 'invalid' into text field 'xpath: //*[@id="email"]'.</msg>
+<msg time="2024-09-30T18:11:22.065109" level="INFO">Typing text 'teste@teste.com' into text field 'xpath: //*[@id="email"]'.</msg>
 <arg>xpath: //*[@id="email"]</arg>
-<arg>invalid</arg>
+<arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-26T18:05:53.777471" elapsed="1.116980"/>
+<status status="PASS" start="2024-09-30T18:11:22.063162" elapsed="0.678404"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:05:53.774327" elapsed="1.121368"/>
+<status status="PASS" start="2024-09-30T18:11:22.060563" elapsed="0.681935"/>
 </kw>
-<kw name="Type invalid password" owner="login_resources">
+<kw name="Type password invalid" owner="login_resources" source_name="Type password ${password}">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:05:54.902532" level="INFO">Typing text 'invalid' into text field 'xpath: //*[@id="password"]'.</msg>
+<msg time="2024-09-30T18:11:22.750585" level="INFO">Typing text 'invalid' into text field 'xpath: //*[@id="password"]'.</msg>
 <arg>xpath: //*[@id="password"]</arg>
-<arg>invalid</arg>
+<arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-26T18:05:54.900092" elapsed="0.177051"/>
+<status status="PASS" start="2024-09-30T18:11:22.747294" elapsed="0.260552"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:05:54.897448" elapsed="0.182894"/>
+<status status="PASS" start="2024-09-30T18:11:22.744949" elapsed="0.263385"/>
 </kw>
 <kw name="Click submit button" owner="login_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOGIN_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-26T18:05:55.093191" elapsed="0.100729"/>
+<status status="PASS" start="2024-09-30T18:11:23.013216" elapsed="0.087498"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:05:55.197593" level="INFO">Clicking element 'xpath: //*[@id="submit"]'.</msg>
+<msg time="2024-09-30T18:11:23.104141" level="INFO">Clicking element 'xpath: //*[@id="submit"]'.</msg>
 <arg>${SUBMIT_LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-26T18:05:55.195375" elapsed="0.286328"/>
+<status status="PASS" start="2024-09-30T18:11:23.102457" elapsed="0.312487"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:05:55.084360" elapsed="0.398352"/>
+<status status="PASS" start="2024-09-30T18:11:23.011250" elapsed="0.404301"/>
 </kw>
 <kw name="Check error message" owner="login_resources">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:05:55.489778" level="INFO">Verifying element 'xpath: //*[@id="error"]' contains exact text 'Incorrect username or password'.</msg>
+<msg time="2024-09-30T18:11:23.419905" level="INFO">Verifying element 'xpath: //*[@id="error"]' contains exact text 'Incorrect username or password'.</msg>
 <arg>${ERROR_MESSAGE}</arg>
 <arg>Incorrect username or password</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-09-26T18:05:55.487630" elapsed="0.066972"/>
+<status status="PASS" start="2024-09-30T18:11:23.418500" elapsed="0.065527"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:05:55.484687" elapsed="0.071399"/>
+<status status="PASS" start="2024-09-30T18:11:23.416779" elapsed="0.067776"/>
 </kw>
 <kw name="Close the browser" owner="login_resources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-09-26T18:05:55.565938" elapsed="4.186704"/>
+<status status="PASS" start="2024-09-30T18:11:23.488413" elapsed="3.608088"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:05:55.558674" elapsed="4.194996"/>
+<status status="PASS" start="2024-09-30T18:11:23.486517" elapsed="3.610521"/>
 </kw>
 <doc>This test case will try to login with invalid email and password</doc>
 <tag>login</tag>
-<status status="PASS" start="2024-09-26T18:05:34.563975" elapsed="25.191221"/>
+<status status="PASS" start="2024-09-30T18:11:09.141313" elapsed="17.956228"/>
 </test>
 <test id="s1-t3" name="CT03 - Login with valid credentials" line="21">
 <kw name="Open the browser" owner="login_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:05:59.771533" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg time="2024-09-30T18:11:27.105916" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-09-26T18:05:59.767189" elapsed="16.696444"/>
+<status status="PASS" start="2024-09-30T18:11:27.105156" elapsed="12.672449"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-09-26T18:06:16.464871" elapsed="0.442381"/>
+<status status="PASS" start="2024-09-30T18:11:39.779100" elapsed="0.445011"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:06:16.911240" level="INFO">Opening url 'https://thinking-tester-contact-list.herokuapp.com/login'</msg>
+<msg time="2024-09-30T18:11:40.226839" level="INFO">Opening url 'https://thinking-tester-contact-list.herokuapp.com/login'</msg>
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-09-26T18:06:16.909008" elapsed="1.672930"/>
+<status status="PASS" start="2024-09-30T18:11:40.225243" elapsed="1.312214"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:05:59.763986" elapsed="18.820380"/>
+<status status="PASS" start="2024-09-30T18:11:27.102694" elapsed="14.436376"/>
 </kw>
-<kw name="Type valid email" owner="login_resources">
+<kw name="Type email ana@teste.com" owner="login_resources" source_name="Type email ${username}">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:06:18.625121" level="INFO">Typing text 'ana@teste.com' into text field 'xpath: //*[@id="email"]'.</msg>
-<arg>${VALID_USERNAME}</arg>
-<arg>${d_username}</arg>
+<msg time="2024-09-30T18:11:41.562609" level="INFO">Typing text 'ana@teste.com' into text field 'xpath: //*[@id="email"]'.</msg>
+<arg>xpath: //*[@id="email"]</arg>
+<arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-26T18:06:18.602230" elapsed="1.091524"/>
+<status status="PASS" start="2024-09-30T18:11:41.560401" elapsed="0.806774"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:06:18.590867" elapsed="1.107476"/>
+<status status="PASS" start="2024-09-30T18:11:41.554021" elapsed="0.813781"/>
 </kw>
-<kw name="Type valid password" owner="login_resources">
+<kw name="Type password 1234567" owner="login_resources" source_name="Type password ${password}">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:06:19.756861" level="INFO">Typing text '1234567' into text field 'xpath: //*[@id="password"]'.</msg>
-<arg>${VALID_PASSWORD}</arg>
-<arg>${d_password}</arg>
+<msg time="2024-09-30T18:11:42.372773" level="INFO">Typing text '1234567' into text field 'xpath: //*[@id="password"]'.</msg>
+<arg>xpath: //*[@id="password"]</arg>
+<arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-26T18:06:19.738135" elapsed="0.424256"/>
+<status status="PASS" start="2024-09-30T18:11:42.370649" elapsed="0.091063"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:06:19.716605" elapsed="0.447606"/>
+<status status="PASS" start="2024-09-30T18:11:42.369091" elapsed="0.093332"/>
 </kw>
 <kw name="Click submit button" owner="login_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOGIN_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-26T18:06:20.170533" elapsed="0.076428"/>
+<status status="PASS" start="2024-09-30T18:11:42.466991" elapsed="0.083719"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:06:20.250430" level="INFO">Clicking element 'xpath: //*[@id="submit"]'.</msg>
+<msg time="2024-09-30T18:11:42.553767" level="INFO">Clicking element 'xpath: //*[@id="submit"]'.</msg>
 <arg>${SUBMIT_LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-26T18:06:20.248478" elapsed="0.280696"/>
+<status status="PASS" start="2024-09-30T18:11:42.551993" elapsed="0.841388"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:06:20.167258" elapsed="0.362664"/>
+<status status="PASS" start="2024-09-30T18:11:42.464498" elapsed="0.929715"/>
 </kw>
 <kw name="Check success message" owner="login_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${logged_message}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-26T18:06:20.535232" elapsed="0.785495"/>
+<status status="PASS" start="2024-09-30T18:11:43.407515" elapsed="0.120482"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-09-26T18:06:21.325092" level="INFO">Verifying element 'xpath: /html/body/div/header/h1' contains exact text 'Contact List'.</msg>
+<msg time="2024-09-30T18:11:43.531229" level="INFO">Verifying element 'xpath: /html/body/div/header/h1' contains exact text 'Contact List'.</msg>
 <arg>${logged_message}</arg>
 <arg>Contact List</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-09-26T18:06:21.322634" elapsed="0.228313"/>
+<status status="PASS" start="2024-09-30T18:11:43.529384" elapsed="0.052496"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:06:20.532630" elapsed="1.020825"/>
+<status status="PASS" start="2024-09-30T18:11:43.399389" elapsed="0.183574"/>
 </kw>
 <kw name="Close the browser" owner="login_resources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-09-26T18:06:21.563647" elapsed="4.515394"/>
+<status status="PASS" start="2024-09-30T18:11:43.587118" elapsed="3.163834"/>
 </kw>
-<status status="PASS" start="2024-09-26T18:06:21.560234" elapsed="4.519584"/>
+<status status="PASS" start="2024-09-30T18:11:43.585226" elapsed="3.166081"/>
 </kw>
 <doc>This test case will try to login with valid email and password</doc>
 <tag>login</tag>
-<status status="PASS" start="2024-09-26T18:05:59.759257" elapsed="26.321949"/>
+<status status="PASS" start="2024-09-30T18:11:27.099275" elapsed="19.652356"/>
 </test>
-<status status="PASS" start="2024-09-26T18:05:08.966591" elapsed="77.120160"/>
+<status status="PASS" start="2024-09-30T18:10:51.258703" elapsed="55.494686"/>
 </suite>
 <statistics>
 <total>
